@@ -90,9 +90,9 @@ html {
 
 .container .our-business {
   display: flex;
-  max-width: 90%;
+  max-width: 100%;
   justify-content: space-around;
-  margin: 100px 15%;
+  margin: 100px 10%;
   align-items: center;
 }
 
@@ -257,7 +257,7 @@ html {
 
 .container .contact {
   display: flex;
-  margin: 0 20% 100px;
+  margin: 0 10% 100px;
 }
 .contact .image {
   margin-right: 10%;
@@ -305,7 +305,7 @@ html {
   width: 100%;
 }
 .container .contact-form .contact-info input {
-  width: 40%;
+  width: 45%;
 }
 .container .contact-form button:hover {
   background-color: var(--blue);
@@ -520,8 +520,8 @@ ul {
     font-size: 14px;
     margin: 15px 0;
   }
-  /* .contact .image img {
+  .contact .image img {
     height: 250px;
     object-fit: cover
-  } */
+  }
 }
