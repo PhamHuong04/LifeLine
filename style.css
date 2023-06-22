@@ -270,7 +270,7 @@ html {
   margin-bottom: 50px;
 }
 .contact .contact-form {
-  width: 100%;
+  width: 40%;
 }
 .container .contact input {
   border-image-source: linear-gradient(to right, var(--blue), var(--green));
@@ -520,8 +520,8 @@ ul {
     font-size: 14px;
     margin: 15px 0;
   }
-  .contact .image img {
+  .contact  img {
     height: 250px;
-    object-fit: cover
+    object-fit: cover;
   }
 }
