@@ -241,20 +241,39 @@ html {
 
 .testimonial .reviews .icon:first-child {
   position: absolute;
-  left: 24%;
+  left: 35%;
 }
 .testimonial .reviews .icon:last-child {
   position: absolute;
-  right: 28%;
+  right: 32%;
 }
 .testimonial .avatar {
   border-radius: 50%;
+}
+.testimonial .image-avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: #fff;
   margin-top: -70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .testimonial .content {
   color: var(--gray);
   padding: 0 15%;
   margin: 50px 0;
+}
+.testimonial .icon {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact .container {

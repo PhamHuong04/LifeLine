@@ -164,14 +164,16 @@
         <h2 class="title text-title">Testimonial</h2>
         <div class="reviews">
           <div class="icon">
-            <i class="fa-solid fa-circle-chevron-left icon"></i>
+            <i class="fa-solid fa-circle-chevron-left"></i>
           </div>
           <div class="author">
-            <img
-              src="./image/pexels-andrea-piacquadio-733872 1.png"
-              alt="author-name"
-              class="avatar"
-            />
+            <div class="image-avatar">
+              <img
+                src="./image/pexels-andrea-piacquadio-733872 1.png"
+                alt="author-name"
+                class="avatar"
+              />
+            </div>
             <p class="content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -180,7 +182,7 @@
             </p>
           </div>
           <div class="icon">
-            <i class="fa-solid fa-circle-chevron-right icon"></i>
+            <i class="fa-solid fa-circle-chevron-right"></i>
           </div>
         </div>
         <ul class="dots">
@@ -201,8 +203,10 @@
           <h2 class="title">Contact Form</h2>
           <form action="">
             <input type="text" placeholder="Name" class="name" />
-            <input type="text" class="email" placeholder="Email" />
-            <input type="text" class="phone" placeholder="Phone number" />
+            <div class="contact-info">
+              <input type="text" class="email row" placeholder="Email" />
+              <input type="text" class="phone row" placeholder="Phone number" />
+            </div>
             <textarea
               name="request"
               id=""
