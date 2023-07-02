@@ -174,9 +174,7 @@ html {
   margin-top: 100px;
   justify-content: space-between;
 }
-/* .our-specialists .doctor {
-  margin-right: 10px;
-} */
+
 .icon {
   color: var(--green);
   font-size: 45px;
@@ -295,7 +293,7 @@ html {
   border-image-source: linear-gradient(to right, var(--blue), var(--green));
   border-width: 1pt;
   border-image-slice: 1;
-  padding: 10px 0 10px 10px;
+  padding: 10px 0 10px 20px;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -312,12 +310,12 @@ html {
   margin: 30px 0;
 }
 .contact-form .contact-info {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-.contact-form .contact-info input {
-  width: 45%;
+.contact-form .contact-info input:first-child {
+  margin-right: 10px;
+  width: 85%;
 }
 .contact-form button:hover {
   background-color: var(--blue);
@@ -437,7 +435,7 @@ ul {
   .our-specialists .list {
     margin-top: 50px;
   }
-  .icon {
+  .our-specialists .icon {
     display: none;
   }
 
@@ -461,6 +459,7 @@ ul {
   }
   .our-specialists .list-doctor {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
   .our-specialists .add {
     font-size: 14px;
@@ -492,6 +491,9 @@ ul {
     background-color: #ffffff;
     opacity: 0.4;
   }
+  .testimonial .icon {
+    display: none;
+  }
   .contact {
     display: flex;
     margin: 0 5% 50px;
@@ -508,26 +510,27 @@ ul {
     margin-bottom: 10px;
   }
   .contact input {
-    padding: 5px 0;
+    padding: 5px 0 5px 5px;
     width: 100%;
     margin-bottom: 5px;
   }
   .contact textarea {
-    padding: 5px 0;
+    padding: 5px 0 0 5px;
+    height: 50px;
   }
   .contact-form {
     width: 50%;
   }
   .contact-form .contact-info {
-    width: 100%;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(1, 1fr);
   }
-  .contact-form .contact-info input {
+  .contact-form .contact-info input:first-child {
     width: 100%;
   }
   .contact-form button {
     font-size: 14px;
-    margin: 15px 0;
+    margin: 0;
+    display: inline-block;
   }
   .contact img {
     height: 250px;
