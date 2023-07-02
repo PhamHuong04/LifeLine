@@ -12,6 +12,10 @@ html {
   --green: #00c187;
   --gray: #888888;
 }
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
 .text-discription {
   font-size: 24px;
   font-weight: 700;
@@ -27,17 +31,17 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   z-index: -1;
 }
 .header .content {
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #fff;
-  line-height: 81px;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
 }
 .header .content .title {
   font-size: 64px;
@@ -51,15 +55,14 @@ html {
   margin-top: 30px;
 }
 
-.menu {
+.menu .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 80%;
-  margin: auto;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.05);
   z-index: 1;
   margin-top: -50px;
 }
+
 .feature {
   background-color: #fff;
   padding: 50px 30px;
@@ -84,41 +87,38 @@ html {
   color: var(--gray);
   font-size: 16px;
 }
-.container {
-  margin-top: 100px;
-}
 
-.container .our-business {
+.our-business .container {
   display: flex;
-  max-width: 100%;
   justify-content: space-around;
-  margin: 100px 10%;
   align-items: center;
+  margin: 100px auto;
 }
 
-.container .our-business .content {
+.our-business .content {
   max-width: 50%;
   margin-left: 10%;
 }
 
-.container .our-business .title {
+.our-business .title {
   font-size: 36px;
   font-weight: 900;
   text-transform: uppercase;
   color: var(--blue);
   margin-bottom: 20px;
 }
-.container .our-business .discription {
+.our-business .discription {
   font-size: 18px;
   color: var(--gray);
   margin: 15px auto 40px;
 }
 
-.container .our-business a {
+.our-business a {
   text-decoration: none;
   padding: 15px 50px;
+  display: inline-block;
 }
-.container .our-business .button-visit {
+.our-business .button-visit {
   color: #fff;
   background-color: var(--green);
   border-radius: 35px;
@@ -129,32 +129,32 @@ html {
   margin-top: 20px;
   width: 30%;
 }
-.container .our-business .button-visit:hover {
+.our-business .button-visit:hover {
   background-color: var(--blue);
 }
-
-.container .list-awards {
+.list-awards {
   background-image: url("./image/bg.png");
-  background-color: var(--blue);
-  text-transform: capitalize;
-  color: #fff;
-  display: flex;
-  padding: 60px 50px;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 338px;
+  background-position: center;
+  background-color: var(--blue);
+  height: 235px;
 }
-.container .list-awards .number {
+.list-awards .container {
+  text-transform: capitalize;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.list-awards .number {
   margin-top: 20px;
 }
 
-.container .our-specialists {
-  margin: 0 10%;
-}
-.container .our-specialists .title {
+.our-specialists .title {
   margin-top: 100px;
   font-size: 36px;
   font-weight: 900;
@@ -162,31 +162,33 @@ html {
   color: var(--blue);
   text-align: center;
 }
-.container .list-doctor {
+.list-doctor {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
-.container .our-specialists .list {
+.our-specialists .list {
   display: flex;
   align-items: center;
   margin-top: 100px;
-  justify-content: center;
+  justify-content: space-between;
 }
-.container .icon {
+/* .our-specialists .doctor {
+  margin-right: 10px;
+} */
+.icon {
   color: var(--green);
   font-size: 45px;
   cursor: pointer;
-  margin: 0 30px;
 }
-.container .icon:hover {
+.icon:hover {
   color: var(--blue);
 }
-.container .our-specialists .image {
+.our-specialists .image {
   cursor: pointer;
 }
-.container .our-specialists .add {
+.our-specialists .add {
   background-color: var(--green);
   border-radius: 30px;
   padding: 5px;
@@ -200,11 +202,11 @@ html {
   margin: 100px auto;
   cursor: pointer;
 }
-.container .our-specialists .add:hover {
+.our-specialists .add:hover {
   background-color: var(--blue);
 }
 
-.container .our-specialists .add p {
+.our-specialists .add p {
   margin: auto 10px;
 }
 .fa-circle-plus {
@@ -213,7 +215,7 @@ html {
   cursor: pointer;
 }
 
-.container .testimonial {
+.testimonial {
   background-image: url("./image/MaskGroup11.png");
   background-position: top;
   background-repeat: no-repeat;
@@ -224,11 +226,11 @@ html {
   height: 800px;
 }
 
-.container .testimonial .title {
+.testimonial .title {
   padding: 100px 0;
 }
 
-.container .testimonial .reviews {
+.testimonial .reviews {
   background-color: #fff;
   width: 40%;
   margin: 0 28% 50px;
@@ -237,58 +239,49 @@ html {
   align-items: center;
 }
 
-.container .testimonial .reviews .icon:first-child {
+.testimonial .reviews .icon:first-child {
   position: absolute;
   left: 24%;
 }
-.container .testimonial .reviews .icon:last-child {
+.testimonial .reviews .icon:last-child {
   position: absolute;
   right: 28%;
 }
-.container .testimonial .avatar {
+.testimonial .avatar {
   border-radius: 50%;
   margin-top: -70px;
 }
-.container .testimonial .content {
+.testimonial .content {
   color: var(--gray);
   padding: 0 15%;
   margin: 50px 0;
 }
 
-.container .contact {
+.contact .container {
   display: flex;
-  margin: 0 10% 100px;
 }
 .contact .image {
   margin-right: 10%;
 }
-.container .contact .title {
+.contact .title {
   font-size: 33px;
   font-weight: 900;
   text-transform: uppercase;
   color: var(--blue);
   margin-bottom: 50px;
 }
-.contact .contact-form {
-  width: 40%;
-}
-.container .contact input {
+
+.contact input,
+.contact textarea {
   border-image-source: linear-gradient(to right, var(--blue), var(--green));
   border-width: 1pt;
   border-image-slice: 1;
-  padding: 10px 0;
+  padding: 10px 0 10px 10px;
   width: 100%;
   margin-bottom: 20px;
 }
-.container .contact textarea {
-  border-image-source: linear-gradient(to right, var(--blue), var(--green));
-  border-width: 1pt;
-  border-image-slice: 1;
-  padding: 10px 0;
-  width: 100%;
-}
 
-.container .contact-form button {
+.contact-form button {
   text-transform: uppercase;
   color: #fff;
   padding: 10px 20px;
@@ -299,21 +292,24 @@ html {
   font-weight: 900;
   margin: 30px 0;
 }
-.container .contact-form .contact-info {
+.contact-form .contact-info {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.container .contact-form .contact-info input {
+.contact-form .contact-info input {
   width: 45%;
 }
-.container .contact-form button:hover {
+.contact-form button:hover {
   background-color: var(--blue);
 }
 ul {
   display: none;
 }
 @media only screen and (max-width: 768px) {
+  .container {
+    width: 345px;
+  }
   .dots {
     list-style: none;
     padding: 0;
@@ -341,7 +337,7 @@ ul {
     font-size: 14px;
     margin-top: 0;
   }
-  .menu {
+  .menu .container {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -369,66 +365,60 @@ ul {
   .feature:nth-child(2) {
     border-bottom: 1px solid var(--green);
   }
-  .container {
-    margin-top: 0;
-  }
-  .container .our-business {
+  .our-business .container {
     flex-direction: column;
     margin: 50px 0;
-    max-width: 100%;
   }
-  .container img {
+  img {
     width: 100%;
     height: auto;
   }
-  .container .our-business .content {
-    max-width: 80%;
+  .our-business .content {
+    max-width: 90%;
     text-align: center;
     margin: auto;
   }
-  .container .our-business .title {
+  .our-business .title {
     font-size: 18px;
     margin: 20px 0;
   }
-  .container .our-business .discription {
+  .our-business .discription {
     font-size: 12px;
     margin: 15px auto 20px;
     text-align: left;
   }
-  .container .our-business a {
+  .our-business a {
     padding: 10px 30px;
   }
-  .container .our-business .button-visit {
+  .our-business .button-visit {
     font-size: 16px;
     margin-top: 20px;
     width: 30%;
   }
-  .container .list-awards {
-    height: 336px;
-    flex-wrap: wrap;
-    padding: 30px 20px;
+  .list-awards .container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .container .list-awards .number {
+  .list-awards .number {
     font-size: 40px;
   }
-  .container .list-awards .name {
+  .list-awards .name {
     font-size: 16px;
   }
 
-  .container .our-specialists {
+  .our-specialists {
     margin: auto;
   }
-  .container .list-awards .list {
-    width: 50%;
+  .list-awards .list {
+    width: 100%;
   }
-  .container .our-specialists .title {
+  .our-specialists .title {
     margin-top: 50px;
     font-size: 18px;
   }
-  .container .our-specialists .list {
+  .our-specialists .list {
     margin-top: 50px;
   }
-  .container .icon {
+  .icon {
     display: none;
   }
 
@@ -445,34 +435,34 @@ ul {
   .our-specialists .doctor {
     margin: 0 10px;
   }
-  .container .testimonial {
+  .testimonial {
     background-image: url("./image/MaskGroup11.png");
     background-position: center;
     height: 500px;
   }
-  .container .our-specialists .list-doctor {
+  .our-specialists .list-doctor {
     grid-template-columns: repeat(2, 1fr);
   }
-  .container .our-specialists .add {
+  .our-specialists .add {
     font-size: 14px;
     margin: 50px auto;
   }
   .fa-circle-plus {
     font-size: 30px;
   }
-  .container .testimonial .title {
+  .testimonial .title {
     padding: 50px 0 100px;
     font-size: 18px;
   }
-  .container .testimonial .author img {
+  .testimonial .author img {
     width: 109px;
   }
-  .container .testimonial .reviews {
+  .testimonial .reviews {
     width: 80%;
     margin: auto;
     padding: 0;
   }
-  .container .testimonial .content {
+  .testimonial .content {
     font-size: 12px;
   }
 
@@ -483,7 +473,7 @@ ul {
     background-color: #ffffff;
     opacity: 0.4;
   }
-  .container .contact {
+  .contact {
     display: flex;
     margin: 0 5% 50px;
   }
@@ -494,33 +484,33 @@ ul {
     margin-right: 5%;
     width: 50%;
   }
-  .container .contact .title {
+  .contact .title {
     font-size: 18px;
     margin-bottom: 10px;
   }
-  .container .contact input {
+  .contact input {
     padding: 5px 0;
     width: 100%;
     margin-bottom: 5px;
   }
-  .container .contact textarea {
+  .contact textarea {
     padding: 5px 0;
   }
-  .container .contact-form {
+  .contact-form {
     width: 50%;
   }
-  .container .contact-form .contact-info {
+  .contact-form .contact-info {
     width: 100%;
     flex-wrap: wrap;
   }
-  .container .contact-form .contact-info input {
+  .contact-form .contact-info input {
     width: 100%;
   }
-  .container .contact-form button {
+  .contact-form button {
     font-size: 14px;
     margin: 15px 0;
   }
-  .contact  img {
+  .contact img {
     height: 250px;
     object-fit: cover;
   }
